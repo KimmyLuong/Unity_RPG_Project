@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0504a1ef9a530cc4bb95c143fd060dca, type: 3}
+  m_Name: Shoes
+  m_EditorClassIdentifier: 
+  name: Shoes
+  itemSprite: {fileID: 0}
+  defaultItem: 1
+  damage: 0
+  defense: 0
+  meshBlendShape: 
+  equipmentEnumerator: 5
+  mesh: {fileID: 137411093134875388, guid: 90fa471d043ef0f438d5536658a93b53, type: 2}
