@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour {
 				interactable = hit.transform.GetComponent<Interactable>();
 
 				if(interactable != null){
-					Debug.Log("I'm working");
 					motor.SetFocus(interactable);
 					interactable.IsFocused(this);
 				}

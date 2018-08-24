@@ -42,7 +42,6 @@ public class EquipmentManager : MonoBehaviour {
 
 	public void equipItem(Equipment newItem){
 		int equipmentIndex = (int)newItem.equipmentEnumerator;
-		Debug.Log("Wtf index pls: " + equipmentIndex);
 		Equipment oldItem = UnequipItem(equipmentArray[equipmentIndex]);
 		if(onEquipmentChangedCallback != null){
 			onEquipmentChangedCallback(newItem, oldItem);
