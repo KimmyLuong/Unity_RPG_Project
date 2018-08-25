@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour {
 
 			if(Physics.Raycast(ray, out hit, 100, movementMask)){
 
-				Debug.Log("We hit" + hit.collider.name + " " + hit.point);
+				// Debug.Log("We hit" + hit.collider.name + " " + hit.point);
 				//  Move our player to what we hit
 				motor.MoveToPoint(hit.point);
 				// Stop focussing any objects
@@ -44,11 +44,13 @@ public class PlayerController : MonoBehaviour {
 		if(Input.GetMouseButton(1)){
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
-
+			if(interactable != null){
+				interactable.Defocus();
+			}
 			if(Physics.Raycast(ray, out hit, 100)){
 
 				interactable = hit.transform.GetComponent<Interactable>();
-
+				
 				if(interactable != null){
 					motor.SetFocus(interactable);
 					interactable.IsFocused(this);

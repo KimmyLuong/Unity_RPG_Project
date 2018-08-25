@@ -4286,6 +4286,7 @@ GameObject:
   - component: {fileID: 982656927}
   - component: {fileID: 982656926}
   - component: {fileID: 982656925}
+  - component: {fileID: 982656933}
   - component: {fileID: 982656924}
   - component: {fileID: 982656928}
   - component: {fileID: 982656929}
@@ -4412,7 +4413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   damageValue:
-    baseValue: 0
+    baseValue: 6
   armorValue:
     baseValue: 0
 --- !u!114 &982656932
@@ -4426,6 +4427,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3076b62055ec716459a6d0e31afee0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &982656933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 982656923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765c35e36d39c1f4c9aac5e92facfef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  cooldownTimer: 0
 --- !u!4 &988239029 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4952423082734054, guid: f1c83dabf414b224db3fb43099d4a336,
@@ -4848,6 +4862,8 @@ GameObject:
   - component: {fileID: 1078586632}
   - component: {fileID: 1078586635}
   - component: {fileID: 1078586636}
+  - component: {fileID: 1078586637}
+  - component: {fileID: 1078586638}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -4881,7 +4897,7 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 200
-  m_StoppingDistance: 3
+  m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -4930,6 +4946,35 @@ CapsuleCollider:
   m_Height: 1.08
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1078586637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078586631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 765c35e36d39c1f4c9aac5e92facfef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  cooldownTimer: 0
+--- !u!114 &1078586638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1078586631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5437aaec17b2e9b4d860de03ceb1a3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  damageValue:
+    baseValue: 5
+  armorValue:
+    baseValue: 0
 --- !u!1 &1085447258
 GameObject:
   m_ObjectHideFlags: 0

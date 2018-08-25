@@ -15,12 +15,15 @@ public class Enemy : MonoBehaviour {
 
 	private EnemyInteractable enemyInteractable;
 
+	CharacterCombat myCombat;
+
 	// Use this for initialization
 	void Start () {
 		meshAgent = GetComponent<NavMeshAgent> ();
 		player = PlayerManager.instance;
 		enemyInteractable = GetComponent<EnemyInteractable> ();
 		meshAgent.stoppingDistance = enemyInteractable.radius;
+		myCombat = GetComponent<CharacterCombat>();
 	}
 
 	private void OnDrawGizmos () {
@@ -37,11 +40,16 @@ public class Enemy : MonoBehaviour {
 		float distance = Vector3.Distance (playerTransform.position, transform.position);
 		if (distance <= aggroRange) {
 			meshAgent.updateRotation = false;
-			meshAgent.stoppingDistance = 2f;
+			meshAgent.stoppingDistance = 2;
+			Debug.Log("Wtf radius : " + meshAgent.radius);
 			meshAgent.SetDestination (playerTransform.position);
 			Face();
-			if(distance < meshAgent.stoppingDistance){
-				Debug.Log("Attacking " + player.name);
+			Debug.Log("Distance Away: " + distance);
+			if(distance <= meshAgent.stoppingDistance){
+				CharacterStats playerStat = player.GetComponent<CharacterStats>();
+				if(playerStat != null){
+					myCombat.Attack(playerStat);
+				}
 			}
 		}
 	}

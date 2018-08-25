@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class EnemyInteractable : Interactable {
 
+	PlayerManager playerManager;
 
+	CharacterStats myStats;
+
+	private void Start() {
+		playerManager = PlayerManager.instance;
+		myStats = GetComponent<CharacterStats>();
+	}
 	public override void Interact(){
 		base.Interact();
-		Debug.Log("Enemy interacting with me");
+		CharacterCombat playerCombat = playerManager.GetComponent<CharacterCombat>();
+		if(playerCombat != null){
+			playerCombat.Attack(myStats);
+		}
 	}
 	
 }

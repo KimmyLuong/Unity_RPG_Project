@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerStat : CharacterStats {
 
 	private void Start() {
@@ -18,5 +17,10 @@ public class PlayerStat : CharacterStats {
 			armorValue.RemoveValue(oldItem.armorValue);
 			damageValue.RemoveValue(oldItem.damageValue);
 		}
+	}
+
+	public override void Die(){
+		base.Die();
+		PlayerManager.instance.KillPlayer();
 	}
 }

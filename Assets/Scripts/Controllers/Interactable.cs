@@ -21,12 +21,11 @@ public class Interactable : MonoBehaviour {
 	}
 
 	public virtual void Interact(){
-		Debug.Log("Interacting");
+		// Debug.Log("Interacting");
 		hasInteracted = true;
 	}
 
 	private void Update() {
-		// Debug.Log("Radius: " + player.transform.position);
 		if(player != null && Vector3.Distance(player.transform.position, interactionSpace.position) < radius){
 			if(!hasInteracted){
 				Interact();
