@@ -10,6 +10,8 @@ public class CharacterStats : MonoBehaviour {
 	public Stats damageValue;
 	public Stats armorValue;
 
+	public event System.Action<int, int> OnHealthChanged;
+
 	private void Awake() {
 		currentHealth = maxHealth;
 	}
@@ -26,6 +28,7 @@ public class CharacterStats : MonoBehaviour {
 		currentHealth -= damage;
 
 		Debug.Log(transform.name + " has taken " + damage + " damage.");
+		OnHealthChanged.Invoke(currentHealth, maxHealth);
 		if(currentHealth <= 0){
 			Die();
 		}

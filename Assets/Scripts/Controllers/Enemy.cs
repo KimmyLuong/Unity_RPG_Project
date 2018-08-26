@@ -41,10 +41,8 @@ public class Enemy : MonoBehaviour {
 		if (distance <= aggroRange) {
 			meshAgent.updateRotation = false;
 			meshAgent.stoppingDistance = 2;
-			Debug.Log("Wtf radius : " + meshAgent.radius);
 			meshAgent.SetDestination (playerTransform.position);
 			Face();
-			Debug.Log("Distance Away: " + distance);
 			if(distance <= meshAgent.stoppingDistance){
 				CharacterStats playerStat = player.GetComponent<CharacterStats>();
 				if(playerStat != null){
