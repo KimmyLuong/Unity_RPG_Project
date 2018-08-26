@@ -6,5 +6,15 @@ AnimatorOverrideController:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Skeleton_override
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 17ef33d3f994b834ebe4d8b8de62f7f5, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400012, guid: 73be9633513854604baae3aa06041436, type: 3}
+    m_OverrideClip: {fileID: 7400006, guid: 52fcd01fcee05a44ba44d0e380757ef5, type: 3}
+  - m_OriginalClip: {fileID: 7400002, guid: 73be9633513854604baae3aa06041436, type: 3}
+    m_OverrideClip: {fileID: 7400008, guid: 52fcd01fcee05a44ba44d0e380757ef5, type: 3}
+  - m_OriginalClip: {fileID: 7400006, guid: 73be9633513854604baae3aa06041436, type: 3}
+    m_OverrideClip: {fileID: 7400010, guid: 52fcd01fcee05a44ba44d0e380757ef5, type: 3}
+  - m_OriginalClip: {fileID: 7400004, guid: 73be9633513854604baae3aa06041436, type: 3}
+    m_OverrideClip: {fileID: 7400010, guid: 52fcd01fcee05a44ba44d0e380757ef5, type: 3}
+  - m_OriginalClip: {fileID: 7400014, guid: 73be9633513854604baae3aa06041436, type: 3}
+    m_OverrideClip: {fileID: 7400002, guid: 52fcd01fcee05a44ba44d0e380757ef5, type: 3}
